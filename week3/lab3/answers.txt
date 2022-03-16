@@ -1,0 +1,12 @@
+sort1 uses: Bubble sort
+
+How do you know?: It instantly "processed" the numbers when it was already sorted and therefore was the quickest of the three. 
+This also means it was the slowest when the sample was reversed. 
+
+sort2 uses: Merge sort
+
+How do you know?: It was the fastest of the three on sorting large, random sample sizes as its algorithm is better suited for it. 
+
+sort3 uses: Selection sort 
+
+How do you know?: Unlike bubble sort, its running time was about the same for the ordered and reversed samples. 
