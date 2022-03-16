@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+
+        function correct()
+        {
+            document.querySelector("#q1").textContent = 'Correct';
+        }
+        function wrong()
+        {
+            document.querySelector("#q1").textContent = 'Wrong';
+        }
+        function revert()
+        {
+            document.querySelector('#c1').style.backgroundColor = '#d9edff';
+            document.querySelector('#w2').style.backgroundColor = '#d9edff';
+            document.querySelector('#w3').style.backgroundColor = '#d9edff';
+            document.querySelector('#w4').style.backgroundColor = '#d9edff';
+            document.querySelector('#w5').style.backgroundColor = '#d9edff';
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() // Listen to any event within the body of the HTML tree
+        {
+            let body = document.querySelector('body');
+            document.querySelector('#c1').onclick = function() // Query when user click onto the element with this id number. 
+            {
+                revert();
+                document.querySelector('#c1').style.backgroundColor = 'green'; // Turn the element with this id into color green.
+                correct();
+            };
+
+            document.querySelector('#w2').onclick = function()
+            {
+                revert();
+                document.querySelector('#w2').style.backgroundColor = 'red';
+                wrong();
+            };
+
+            document.querySelector('#w3').onclick = function()
+            {
+                revert();
+                document.querySelector('#w3').style.backgroundColor = 'red';
+                wrong();
+            };
+
+            document.querySelector('#w4').onclick = function()
+            {
+                revert();
+                document.querySelector('#w4').style.backgroundColor = 'red';
+                wrong();
+            };
+
+            document.querySelector('#w5').onclick = function()
+            {
+                revert();
+                document.querySelector('#w5').style.backgroundColor = 'red';
+                wrong();
+            };
+
+        })
+        
+        function check()
+        {
+            let input = document.querySelector('#Answer').value;
+            input = input.toLowerCase();
+            if (input == "switzerland")
+            {
+                    document.querySelector("#q2").textContent = 'Correct!';
+                    document.querySelector("#q2").style.backgroundColor = "green";
+            }
+            else
+            {
+                    document.querySelector("#q2").textContent = 'Incorrect!';
+                    document.querySelector("#q2").style.backgroundColor = "red";
+            }
+        }
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            
+            <div class="section"> 
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <h3 id=q1>
+                    What is the approximate ratio of people to sheep in New Zealand?
+                </h3>
+                <button id="w5">6 people per 1 sheep</button>
+                <button id="w2">3 people per 1 sheep</button>
+                <button id="w3">1 person per 1 sheep</button>
+                <button id="w4">1 person per 3 sheep</button>
+                <button id="c1">1 person per 6 sheep</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <h3>
+                    In which country is it illegal to own only one guinea pig, as a lone guinea pig might get lonely?
+                </h3>
+                <h3 id=q2> </h3>
+                <form onsubmit="check(); return false"> <!-- Call a function and prevent it from submitting the form -->
+                    <input autocomplete="off" id="Answer" type="text">
+                    <input type="submit" value="Check Answer">
+                </form>
+            </div>
+
+        </div>
+    </body>
+</html>
