@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Introducing | Dungeons & Dragons icon</title>
+        <link rel = "icon" href = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKtNyI18efnP1MX8mSYCxU_HYogiTQt8FR7w&usqp=CAU"
+        type = "image/x-icon">
+        
+        <script>
+            function blink()
+            {
+                let button = document.querySelector('#firstpage_button');
+                if (button.style.visibility === 'hidden')
+                {
+                    button.style.visibility = 'visible';
+                }
+                else
+                {
+                    button.style.visibility = 'hidden';
+                }
+            }
+            window.setInterval(blink,600);
+            
+        </script>
+    </head>
+    <body>
+      
+        <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" href="/index.html">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/howtoplay.html">HOW TO PLAY</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/chooserace.html">CHOOSE A RACE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/chooseclass.html">CHOOSE A CLASS</a>
+        </li>
+        </ul>
+      
+        <div id="firstpage-header">
+            <img src="https://wallpaperaccess.com/full/1886598.jpg" alt="homepage">
+                <div class="page-width">
+                    <div class="firstpage_intro">
+                        <h1>
+                            <span class="first-line">Welcome to</span>
+                            <span>Dungeons & Dragons</span>
+                        </h1>
+                            <div class="text">
+                                <p>A living-breathing world through a collaborative storytelling game where one person plays the narrator and supporting cast while everyone else plays a main character.</p>
+                            </div>
+                        <p id="firstpage_button">
+                            <a href="/howtoplay.html" tabindex="0">Learn More</a>
+                        </p>
+                    </div>
+                </div>
+        </div>
+    
+    </body>
+</html>
